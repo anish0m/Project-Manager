@@ -1,6 +1,7 @@
-import noProjectImage from "../assets/no-project.svg";
+import noProjectImage from "../assets/no-projects.png";
+import Button from "./Button";
 
-export default function NoProject() {
+export default function NoProjectSelected() {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
@@ -15,7 +16,7 @@ export default function NoProject() {
         Select a project or get started with a new one.
       </p>
       <p className="mt-8">
-        <button>Create New Project</button>
+        <Button>Create New Project</Button>
       </p>
     </div>
   );
