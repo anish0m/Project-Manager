@@ -21,31 +21,40 @@ function App() {
 
   function handleAddProject(projectData) {
     setProjectsState((prevState) => {
+      const projectID = crypto.randomUUID();
+
       const newProject = {
         ...projectData,
-        id: crypto.randomUUID(),
+        id: projectID,
       };
 
       return {
         ...prevState,
+        selectedProjectId: undefined,
         projects: [...prevState.projects, newProject],
       };
     });
   }
-
-  console.log(projectsState);
 
   let content;
 
   if (projectsState.selectedProjectId === null) {
     content = <NewProject onAdd={handleAddProject} />;
   } else if (projectsState.selectedProjectId === undefined) {
-    content = <NoProjectSelected onStartAddProject={handleStartAddProject} />;
+    content = (
+      <NoProjectSelected
+        onStartAddProject={handleStartAddProject}
+        projects={projectsState.projects}
+      />
+    );
   }
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <Sidebar onStartAddProject={handleStartAddProject} />
+      <Sidebar
+        onStartAddProject={handleStartAddProject}
+        projects={projectsState.projects}
+      />
       {content}
     </main>
   );
