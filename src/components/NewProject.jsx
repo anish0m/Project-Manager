@@ -34,9 +34,11 @@ export default function NewProject({ onAdd }) {
   return (
     <>
       <Modal ref={modal} buttonText="Okay">
-        <h2>Invalid Input</h2>
-        <p>You forgot to enter a field.</p>
-        <p>Please make sure all input fields are filled out.</p>
+        <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
+        <p className="text-stone-600 mb-4">
+          <p>You forgot to enter a field.</p>
+          <p>Please make sure all input fields are filled out.</p>
+        </p>
       </Modal>
 
       <div className="w-[35rem] mt-16">
