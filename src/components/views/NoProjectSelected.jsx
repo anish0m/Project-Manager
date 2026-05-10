@@ -1,5 +1,5 @@
 import noProjectImage from "../assets/no-projects.png";
-import Button from "./ui-elements/Button";
+import Button from "../ui-elements/Button";
 
 export default function NoProjectSelected({ onStartAddProject }) {
   return (
