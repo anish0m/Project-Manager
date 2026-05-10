@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/ui-elements/Sidebar";
 import NoProjectSelected from "./components/NoProjectSelected";
 import NewProject from "./components/NewProject";
 import SelectedProject from "./components/SelectedProject";
